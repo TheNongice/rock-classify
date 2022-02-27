@@ -113,11 +113,15 @@ homePage = Frame(root, width=WIDTH_FRAME,
                  height=HEIGHT_FRAME, padding=PADDING_FRAME)
 authorPage = Frame(root, width=WIDTH_FRAME,
                    height=HEIGHT_FRAME, padding=PADDING_FRAME)
+authorPage2 = Frame(root, width=WIDTH_FRAME,
+                   height=HEIGHT_FRAME, padding=PADDING_FRAME)
 homePage.pack_propagate(False)
 authorPage.pack_propagate(False)
+authorPage2.pack_propagate(False)
 
 # Images
 authorImage = ImageTk.PhotoImage(Image.open("./asset/author.jpg"))
+authorImage2 = ImageTk.PhotoImage(Image.open("./asset/author2.png"))
 
 # Initial of Recursion A
 def startForm():
@@ -192,10 +196,23 @@ Label(authorPage, text="นายธนกร  แสงจันทร์",
       style="body.TLabel").pack(side=tk.TOP, expand=True)
 Label(authorPage, text="เลขที่ 9 ชั้นมัธยมศึกษาปีที่ 4/1 (โอเมก้า)",
       style="body.TLabel").pack(side=tk.TOP, expand=True)
-Button(authorPage, text="ออก", style="TButton", command=lambda: changePage(
-    authorPage, homePage)).pack(side=tk.BOTTOM, expand=False)
+Button(authorPage, text="ถัดไป", style="TButton", command=lambda: changePage(
+    authorPage, authorPage2)).pack(side=tk.BOTTOM, expand=False)
 Separator(authorPage, orient="horizontal").pack(
     side=tk.BOTTOM, fill=tk.X, pady=20)
+
+# widgets of Author Page2
+Label(authorPage2, text="จัดทำโดย", style="header.TLabel").pack(side=tk.TOP)
+Label(authorPage2, image=authorImage2).pack(side=tk.TOP, expand=True)
+Label(authorPage2, text="นายสตินันท์ แสงแก้ว",
+      style="body.TLabel").pack(side=tk.TOP, expand=True)
+Label(authorPage2, text="เลขที่ 9 ชั้นมัธยมศึกษาปีที่ 4/1 (โอเมก้า)",
+      style="body.TLabel").pack(side=tk.TOP, expand=True)
+Button(authorPage2, text="ออก", style="TButton", command=lambda: changePage(
+    authorPage2, homePage)).pack(side=tk.BOTTOM, expand=False)
+Separator(authorPage2, orient="horizontal").pack(
+    side=tk.BOTTOM, fill=tk.X, pady=20)
+
 
 # Start Program
 homePage.pack()
