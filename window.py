@@ -206,7 +206,7 @@ Label(authorPage2, text="จัดทำโดย", style="header.TLabel").pack(
 Label(authorPage2, image=authorImage2).pack(side=tk.TOP, expand=True)
 Label(authorPage2, text="นายสตินันท์ แสงแก้ว",
       style="body.TLabel").pack(side=tk.TOP, expand=True)
-Label(authorPage2, text="เลขที่ 9 ชั้นมัธยมศึกษาปีที่ 4/1 (โอเมก้า)",
+Label(authorPage2, text="เลขที่ 12 ชั้นมัธยมศึกษาปีที่ 4/1 (โอเมก้า)",
       style="body.TLabel").pack(side=tk.TOP, expand=True)
 Button(authorPage2, text="ออก", style="TButton", command=lambda: changePage(
     authorPage2, homePage)).pack(side=tk.BOTTOM, expand=False)
